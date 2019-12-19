@@ -132,6 +132,14 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
+function divider(numbersArray){
+  evens = []
+  odds = []
+  numbersArray = numbersArray.filter(x =>{
+    ((x % 2 === 0) ? evens.push(x) : odds.push(x))
+  })
+  return [evens, odds]
+}
 
 
 
@@ -154,6 +162,9 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder(arr){
+  return arr.includes(getRandomArbitrary())
+}
 
 
 
@@ -183,6 +194,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(myGroceryList, item){
+  if(!item || !myGroceryList){
+    return []
+  }
+  myGroceryList = myGroceryList.filter(x => {
+    return x !== item
+  })
+  return myGroceryList
+}
+
+function addItem(myGroceryList, item){
+  if(!item || !myGroceryList){
+    return []
+  }
+  myGroceryList.push(item)
+  return myGroceryList
+}
 
 
 
@@ -193,6 +221,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+
+function maker(){
+  arr = []
+  for(let i = 1; i <= 215; i++){
+    arr.push(i)
+  }
+  return arr
+}
 
 
 
@@ -209,6 +245,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+function addTen(numbers){
+  arr = []
+  numbers.forEach(x => {
+    x = Number(x)
+    arr.push(x+10)
+    })
+  return arr
+}
 
 
 
@@ -234,6 +278,13 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+function longer(arr1, arr2){
+  if(arr1.length > arr2.length){
+    return arr1
+  }else {
+    return arr2
+  }
+}
 
 
 
