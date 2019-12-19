@@ -297,7 +297,12 @@ function longer(arr1, arr2){
 */
 
 //Code Here
-
+function both(arr1, arr2){
+  arr3 = arr1.filter(x =>{
+    return arr2.includes(x)
+  })
+  return arr3
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -338,7 +343,13 @@ var colt = {
 */
 
 //Code Here
-
+function addToDev(){
+  devMountainEmployees.push(joe)
+  devMountainEmployees.push(cahlan)
+  devMountainEmployees.push(ryan)
+  devMountainEmployees.push(colt)
+}
+addToDev()
 
 
 /*
@@ -347,6 +358,13 @@ var colt = {
 */
 
 //Code Here
+function removeEmployee(name){
+  arr = devMountainEmployees.filter(x => {
+    return x !== name
+  })
+  return arr
+}
+devMountainEmployees = removeEmployee(cahlan)
 
 
 
@@ -359,6 +377,7 @@ var colt = {
 */
 
 //Code Here
+let users = []
 
 
 
@@ -380,7 +399,12 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
-
+users = [
+  user1, 
+  {name: 'user2', email: 'email2', password: 'password2', username: 'username2'},
+  {name: 'user3', email: 'email3', password: 'password3', username: 'username3'},
+  {name: 'user4', email: 'email4', password: 'password4', username: 'username4'},
+  ]
 
 
 /*
@@ -394,6 +418,9 @@ var user1 = {
 */
 
 //Code Here
+users = users.filter(x => {
+  return x.email !== 'mark.mciver@devmounta.in'
+})
 
 
 
